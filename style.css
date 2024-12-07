@@ -28,6 +28,8 @@ body{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-image: url(image/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: contain;
     
 }
 .container{
