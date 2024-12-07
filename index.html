@@ -10,6 +10,7 @@
   <div class="container">
     <div class="odin-line">
         <img class="odin-logo" src="image/odin-lined.png" alt="Odin logo">
+         <P>COD</P>
     </div>
     <div class="form-div">
         <div class="description">
@@ -18,7 +19,7 @@
             <p>Create Your Account <br>And jump Right Into The Action</p>
         </div>
         <form action="">
-            <p>Enter Classified Information</p>
+            <p><span>Enter Classified Information</span></p>
          <div class="form">
             <div class="form-div-1">
             <label for="first-name">FIRST NAME</label>
@@ -28,22 +29,22 @@
             <input id="email" type="email" placeholder="email@gmail.com" name="email" required>
 
             <label for="password">PASSWORD</label>
-            <input minlength="8" id="password" type="password" name="password" required>
+            <input pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" minlength="8" id="password" type="password" name="password" required>
             </div>
 
             <div class="form-div-2">
             <label for="last-name">LAST NAME</label>
-            <input id="last-name" type="text" name="last-name" placeholder="e.g PRICE">
+            <input id="last-name" type="text" name="last-name" placeholder="e.g PRICE" required>
 
             <label for="phone-number">PHONE NUMBER</label>
-            <input id="phone-number" name="phone-number" type="tel" placeholder="567-230-XXX">
+            <input pattern="[\d-]{11}" maxlength="11" id="phone-number" name="phone-number" type="tel" placeholder="567-230-XXX" required>
 
             <label for="confirm-password">CONFIRM PASSWORD</label>
-            <input minlength="8" id="confirm-password" type="password" name="confirm-password">
+            <input pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" minlength="8" id="confirm-password" type="password" name="confirm-password" required>
            </div>
         
          </div>
-         <button>Create Account</button>
+         <button type="submit">Create Account</button>
          <p>Already have an account? Log in</p>
         </form>
        

@@ -2,37 +2,57 @@
     box-sizing: border-box;;
     
 }
+@font-face {
+    font-family: "myfont";
+    src: url(image/Norse-Bold.otf);
+}
+@font-face {
+    font-family: "myfont-2";
+    src: url(image/Doto/Doto-VariableFont_ROND\,wght.ttf);
+}
+:root{
+    --green-color: lightgreen;
+    --white-color: white;
+    --black-color: black;
 
+}
 h1{
     text-align: center;
     margin-top: 1%;
     text-decoration: underline;
+    font-family: "myfont-2";
 
 }
 body{
-    background-color: bisque;
+    background-color: rgba(5, 4, 4, 0.745);
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    
 }
 .container{
     display: block;
     position: relative;
-    width: calc(100vw - 30%);
-    height: calc(100vh - 200px);
+    width: calc(100vw - 20%);
+    height: calc(100vh - 100px);
     background-image: url(image/call-of-duty-modern-warfare-2-3840x2160-8581.jpg);
     background-size: calc(100vw - 10%) calc(100vh - 200px);
-    margin: 20% auto;
+    margin: 2% auto;
     background-position: left;
-
+    border-radius: 1%;
+    box-shadow: 3px 3px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: auto;
 }
 .form-div{
     position: absolute;
     width: 70%;
     height: 100%;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.7);
     display: block;
     margin: auto;
     right: 0;
+    border-radius: 1%;
+    color: white;
 
 }
 .odin-line{
@@ -40,12 +60,18 @@ body{
     position: absolute;
     width: 100%;
     height: 50px;
-    top: 50%
+    top: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: "myfont";
+    
 
 }
 .odin-logo{
     width: 50px;
     height: 50px;
+    
     
 }
 .form{
@@ -54,13 +80,18 @@ body{
     display: flex;
     flex-wrap: nowrap;
     height: 50%;
+    padding: 2%;
     overflow: auto;
-    border: 1px solid black;
+    box-shadow: -4px 4px 10px 2px rgba(200, 200, 200, 0.4);
+    border-radius: 2%;
+    
     
    
 }
 label{
  display: block;
+ font-family: 'myfont-2';
+ color: white;
  
 
 }
@@ -68,6 +99,10 @@ input{
   display: block;
   margin-top: 1%;
   margin-bottom: 5%;
+  box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  height: 14%;
+
 
 }
 .form > div{
@@ -79,13 +114,15 @@ input{
 button{
     margin-top: 3%;
     padding: 5px;
-    background-color: lightgreen;
+    background-color: var(--green-color);
     border: 1px solid lightgreen;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: -4px 4px 5px rgba(200, 200, 200, 0.4);
+    font-family: 'myfont';
+    height: 30px;
 }
 p{
-    margin-top: 2%
+    margin-top: 1%;
 }
 .description,form{
     margin-left: 2%;
@@ -96,4 +133,30 @@ p{
 }
 .description{
     font-size: 1.2rem;
+    font-family: "myfont";
+    color: var(--green-color)
+}
+.odin-line > p{
+    font-size: 2rem;
+    color: var(--green-color);
+}
+::placeholder{
+    font-weight: 500;
+    font-family: "myfont-2";
+}
+button + p{
+    margin-bottom: 2%;
+    font-family: "myfont";
+}
+p > span{
+    color: lightblue;
+    font-size: 1.2rem;
+    font-family: "myfont-2";
+    font-weight:  900;
+}
+input:focus:valid{
+    border: 3px solid lightgreen;
+}
+input:focus:invalid{
+    border: 3px solid red;
 }
